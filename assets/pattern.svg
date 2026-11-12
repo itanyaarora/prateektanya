@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="220" height="290" viewBox="0 0 220 290">
+  <defs>
+    <path id="arch" d="M-55 92 V-14 C-55 -30 -47 -38 -39 -40 C-41 -55 -31 -63 -21 -61 C-19 -75 -9 -82 -4 -84 C-2 -89 -1 -93 0 -97 C1 -93 2 -89 4 -84 C9 -82 19 -75 21 -61 C31 -63 41 -55 39 -40 C47 -38 55 -30 55 -14 V92" fill="none" stroke="#E6DECB" stroke-width="1.6"/>
+    <path id="leaf" d="M0 0 C5 -4.5 13 -5.2 21 -1.2 C13 3 5 3 0 0Z" fill="#7F834D"/>
+    <g id="flower">
+      <path d="M-6.2 0 C-7.8 -4 -7.8 -9 -6.8 -14.5 L-3.3 -9.6 L0 -16.5 L3.3 -9.6 L6.8 -14.5 C7.8 -9 7.8 -4 6.2 0 C3 2.6 -3 2.6 -6.2 0Z" fill="#EDB7A3"/>
+      <path d="M-3.3 -9.6 L0 -16.5 L3.3 -9.6 C2.2 -4.5 -2.2 -4.5 -3.3 -9.6Z" fill="#E3A08B"/>
+      <path d="M-4.2 0.6 L0 -3.6 L4.2 0.6 L0 4Z" fill="#7F834D"/>
+    </g>
+    <g id="sprig">
+      <g fill="none" stroke="#7F834D" stroke-width="1.9" stroke-linecap="round">
+        <path d="M0 64 C-1.5 34 1.5 2 0 -42"/>
+        <path d="M0 -2 C-8 -10 -16 -19 -25 -32"/>
+        <path d="M0 -10 C8 -16 14 -22 21 -31"/>
+        <path d="M0 18 C10 12 20 7 29 -2"/>
+        <path d="M0 27 C-10 22 -22 17 -31 10"/>
+      </g>
+      <use xlink:href="#leaf" transform="translate(0 46) rotate(-38)"/>
+      <use xlink:href="#leaf" transform="translate(0 52) rotate(-142) scale(1 -1)"/>
+      <use xlink:href="#leaf" transform="translate(0 6) rotate(-48) scale(.85)"/>
+      <use xlink:href="#leaf" transform="translate(0 12) rotate(-132) scale(.85 -.85)"/>
+      <use xlink:href="#leaf" transform="translate(14 9) rotate(-60) scale(.7)"/>
+      <use xlink:href="#leaf" transform="translate(-14 20) rotate(-115) scale(.7 -.7)"/>
+      <use xlink:href="#flower" transform="translate(0 -43)"/>
+      <use xlink:href="#flower" transform="translate(-26 -33) rotate(-28)"/>
+      <use xlink:href="#flower" transform="translate(22 -32) rotate(24)"/>
+      <use xlink:href="#flower" transform="translate(30 -3) rotate(48)"/>
+      <use xlink:href="#flower" transform="translate(-32 9) rotate(-52)"/>
+    </g>
+    <g id="motif"><use xlink:href="#arch"/><use xlink:href="#sprig" transform="translate(0 6) scale(.92)"/></g>
+  </defs>
+  <use xlink:href="#motif" transform="translate(110 145)"/>
+  <use xlink:href="#motif" transform="translate(0 0)"/>
+  <use xlink:href="#motif" transform="translate(220 0)"/>
+  <use xlink:href="#motif" transform="translate(0 290)"/>
+  <use xlink:href="#motif" transform="translate(220 290)"/>
+</svg>

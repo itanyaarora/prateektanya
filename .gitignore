@@ -1,0 +1,5 @@
+# build output for the claude.ai copy, not part of the website
+dist/
+build_hosted.py
+.DS_Store
+.qa-frame.html
