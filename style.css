@@ -24,8 +24,15 @@
   --ease: cubic-bezier(.2, .75, .2, 1);
   --flap-clip: polygon(0 0, 100% 0, 100% 3%, 53.6% 95.5%, 51.6% 99%, 50% 100%, 48.4% 99%, 46.4% 95.5%, 0 3%);
   --flap-clip-in: polygon(0 100%, 100% 100%, 100% 97%, 53.6% 4.5%, 51.6% 1%, 50% 0, 48.4% 1%, 46.4% 4.5%, 0 97%);
-  color-scheme: light;
+  color-scheme: light dark;
 }
+/* Android (Samsung Internet, Chrome) auto-darkens light pages in dark mode, which wrecked the invite.
+   Saying the page supports dark mode turns that off; the "dark" colours below are the same cream look on purpose. */
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: light dark; }
+  html, body { background-color: var(--ground); color: var(--ink); }
+}
+
 @media (min-width: 600px) {
   :root { --r: 16px; --band: 15px; }
 }

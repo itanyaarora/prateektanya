@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
   <title>Roka Plan · Tanya &amp; Prateek</title>
   <meta name="description" content="The plan for Tanya and Prateek's roka on 6 December 2026.">
   <meta property="og:title" content="Roka plan · Tanya &amp; Prateek">
@@ -24,8 +25,15 @@
       --rule: #E2D9C3;
       --blush: #C47F6B;
       --chip: #FBE6DC;
-      color-scheme: light;
+      color-scheme: light dark;
     }
+    /* Android (Samsung Internet, Chrome) auto-darkens light pages in dark mode, which wrecked the invite.
+       Saying the page supports dark mode turns that off; the "dark" colours below are the same cream look on purpose. */
+    @media (prefers-color-scheme: dark) {
+      :root { color-scheme: light dark; }
+      html, body { background-color: var(--bg); color: var(--ink); }
+    }
+    
     * { box-sizing: border-box; }
     body {
       margin: 0; background: var(--bg); color: var(--ink);
