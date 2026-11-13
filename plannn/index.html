@@ -77,6 +77,8 @@
     .linkbtn::after { content: "↗"; font-size: 14px; }
 
     /* Food: menu cards that open in a viewer */
+    .note { margin-bottom: 14px; }
+    .note__final { margin-top: 8px; }
     .menus { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
     .menu-card {
       display: flex; flex-direction: column; gap: 8px; padding: 10px; text-align: left;
@@ -195,7 +197,7 @@
       <ul class="list">
         <li>The brief and overall vision we have shared with decorators:<br>
           <a class="linkbtn" href="https://canva.link/yc7pn8pl6rxbpvj" target="_blank" rel="noopener">View the decor brief</a></li>
-        <li>The decorator will provide 3 to 5 heaters.</li>
+        <li>The decorator will provide everything, including the DJ and 3 to 5 heaters.</li>
         <li>Once the decorator is finalised, we'll add their requirements here and create AI renderings of the decor.</li>
       </ul>
     </div>
@@ -203,6 +205,10 @@
 
   <section id="food">
     <h2>Food</h2>
+    <div class="panel note">
+      <p>Please go through the menus below. If you'd like anything added, share it on the family group.</p>
+      <p class="note__final"><b>Final menu:</b> 30 November, after we visit in person for the tasting.</p>
+    </div>
     <div class="menus">
       <button class="menu-card" type="button" data-menu="namami" data-pages="8" data-title="The Wedding Menu Collection">
         <img src="menus/namami-cover.webp" alt="" width="420" height="594" loading="lazy">
@@ -228,6 +234,14 @@
       <span class="status">Mostly finalised · payment not done yet</span>
       <p><b>The Home Stories Pictures</b></p>
       <a class="linkbtn" href="https://www.instagram.com/thehomestoriespictures" target="_blank" rel="noopener">See their work on Instagram</a>
+    </div>
+  </section>
+
+  <section id="transport">
+    <h2>Transport</h2>
+    <div class="panel">
+      <span class="status">To be finalised</span>
+      <p>Transport for everyone will be arranged. Details will be shared here once it's finalised.</p>
     </div>
   </section>
 
