@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Roka Plan · Tanya &amp; Prateek</title>
+  <meta name="description" content="The plan for Tanya and Prateek's roka on 6 December 2026: timings, food, decor and photos.">
+  <meta property="og:title" content="Roka plan · Tanya &amp; Prateek">
+  <meta property="og:description" content="Sunday, 6 December 2026 · Namami Ganges, Rishikesh. Timings, food, decor and photos in one place.">
+  <meta property="og:image" content="https://prateeksethi.tanyaarora.in/assets/preview.jpg">
+  <link rel="icon" href="../assets/flower.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* A plain, readable plan page in the invite's colours. No animation, just information. */
+    :root {
+      --bg: #FBF6EC;
+      --panel: #FFFDF8;
+      --ink: #3F3E30;
+      --muted: #6B6651;
+      --sage: #5D6143;
+      --rule: #E2D9C3;
+      --blush: #C47F6B;
+      --tag: #FBE6DC;
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: "Spectral", Georgia, serif; font-size: 17px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 660px; margin: 0 auto; padding: 28px max(18px, env(safe-area-inset-left)) 56px max(18px, env(safe-area-inset-right)); }
+    h1, h2, h3 { font-family: "Marcellus", Georgia, serif; font-weight: 400; color: var(--sage); margin: 0; }
+    h1 { font-size: 38px; line-height: 1.15; }
+    h2 { font-size: 25px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+    h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+    h3 { font-size: 18px; margin: 0 0 4px; }
+    p, ul, ol { margin: 0; }
+    a { color: var(--sage); text-underline-offset: 3px; }
+    b { font-weight: 500; }
+
+    header { padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
+    .kicker { font-family: "Marcellus", Georgia, serif; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--blush); margin-bottom: 4px; }
+    .meta { margin-top: 6px; font-size: 18px; }
+    .updated { margin-top: 6px; font-size: 14.5px; color: var(--muted); }
+    .jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .jump a {
+      padding: 6px 13px; border: 1px solid var(--rule); border-radius: 999px; background: var(--panel);
+      font-size: 15px; text-decoration: none; color: var(--sage);
+    }
+
+    section { padding-top: 34px; scroll-margin-top: 12px; }
+    .tag {
+      display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 4px;
+      background: var(--tag); color: var(--blush); font-size: 12.5px; font-weight: 500; letter-spacing: .04em;
+      vertical-align: 2px;
+    }
+
+    /* Timings */
+    .timeline { list-style: none; padding: 0; border-left: 2px solid var(--rule); margin-left: 6px; }
+    .timeline li { position: relative; padding: 0 0 18px 22px; }
+    .timeline li::before {
+      content: ""; position: absolute; left: -7px; top: 8px;
+      width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--sage);
+    }
+    .timeline li.key::before { background: var(--blush); border-color: var(--blush); }
+    .timeline time { display: block; font-size: 16px; font-weight: 500; color: var(--blush); font-variant-numeric: lining-nums; }
+    .timeline p { color: var(--muted); font-size: 16px; }
+    .timeline li:last-child { padding-bottom: 0; }
+
+    .panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; }
+    .panel + .panel { margin-top: 12px; }
+    .todo { border-style: dashed; color: var(--muted); font-style: italic; }
+    ul.list { padding-left: 20px; }
+    ul.list li + li { margin-top: 6px; }
+
+    footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--muted); }
+
+    @media (min-width: 640px) {
+      h1 { font-size: 44px; }
+      .wrap { padding-top: 44px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="kicker">Tanya &amp; Prateek's roka</p>
+    <h1>The plan</h1>
+    <p class="meta">Sunday, 6 December 2026 · Namami Ganges, Rishikesh</p>
+    <p class="updated">Last updated 13 November 2026. Times marked <span class="tag">TBC</span> may still change.</p>
+    <nav class="jump" aria-label="Sections">
+      <a href="#timings">Timings</a>
+      <a href="#food">Food</a>
+      <a href="#guests">For guests</a>
+      <a href="#decor">Decor</a>
+      <a href="#photos">Photos</a>
+      <a href="#tbd">Still to decide</a>
+    </nav>
+  </header>
+
+  <!-- Timings: as Tanya shared them on 13 Nov. Ranges = not final yet. -->
+  <section id="timings">
+    <h2>Timings</h2>
+    <ol class="timeline">
+      <li>
+        <time>10:00 or 11:00 am <span class="tag">TBC</span></time>
+        <h3>Check-in opens</h3>
+      </li>
+      <li>
+        <time>12:00 pm</time>
+        <h3>Everyone checked in</h3>
+      </li>
+      <li>
+        <time>12:30 to 2:30 / 3:00 pm</time>
+        <h3>Lunch</h3>
+      </li>
+      <li>
+        <time>4:00 or 4:30 pm <span class="tag">TBC</span></time>
+        <h3>Everyone ready</h3>
+      </li>
+      <li class="key">
+        <time>Then</time>
+        <h3>Couple entry and ring exchange</h3>
+      </li>
+      <li class="key">
+        <time>4:00 or 4:45 pm <span class="tag">TBC</span></time>
+        <h3>Ganga aarti</h3>
+      </li>
+      <li>
+        <time>5:20 pm</time>
+        <h3>Everything by the river wraps up</h3>
+      </li>
+      <li>
+        <time>6:00 pm</time>
+        <h3>Everyone gathers upstairs, couple is seated</h3>
+        <p>The host announces the couple. Tea and snacks are served.</p>
+      </li>
+      <li class="key">
+        <time>Then</time>
+        <h3>Gift ceremony</h3>
+      </li>
+      <li>
+        <time>Until 8:30 pm</time>
+        <h3>Dance performances and family games</h3>
+        <p>Games to bring the two families together, like Chacha vs Chacha, plus dance performances.</p>
+      </li>
+      <li>
+        <time>8:00 pm</time>
+        <h3>Dinner opens</h3>
+      </li>
+      <li class="key">
+        <time>8:30 pm</time>
+        <h3>Dance floor opens for everyone</h3>
+      </li>
+    </ol>
+  </section>
+
+  <section id="food">
+    <h2>Food</h2>
+    <!-- TO ADD: menu PDF and food photos from Tanya -->
+    <div class="panel todo">The menu and food photos will be added here.</div>
+  </section>
+
+  <section id="guests">
+    <h2>For guests</h2>
+    <div class="panel">
+      <ul class="list">
+        <li><b>Arrive:</b> check-in opens at 10:00 or 11:00 am <span class="tag">TBC</span>. Please be checked in by 12:00.</li>
+        <li><b>Be ready:</b> by 4:00 or 4:30 pm <span class="tag">TBC</span> for the couple's entry and ring exchange.</li>
+        <li><b>Wear:</b> any pastel colour for the ring ceremony, nothing white. For the after party, Western and comfortable.</li>
+        <li><b>Bring a warm layer:</b> it can get cold by the river in the evening.</li>
+        <li><b>Want to dance?</b> We're making a list of performers. See "Still to decide" for who's collecting names.</li>
+        <li><b>Getting there:</b> <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Namami%20Ganges%20Beach%20Resort%2C%20Shivpuri%2C%20Rishikesh%2C%20Uttarakhand" target="_blank" rel="noopener">directions to the venue</a>, and travel times on the <a href="../#travel">invite</a>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="decor">
+    <h2>Decor</h2>
+    <!-- TO ADD: decoration requirements Tanya has shared with the decorator -->
+    <div class="panel todo">The decoration requirements shared with the decorator will be added here.</div>
+  </section>
+
+  <section id="photos">
+    <h2>Photos</h2>
+    <div class="panel">
+      <h3>Moments to capture</h3>
+      <ul class="list">
+        <li>Couple entry and ring exchange</li>
+        <li>Ganga aarti</li>
+        <li>Couple seated upstairs, and the gift ceremony</li>
+        <li>Family games and dance performances</li>
+        <li>Dance floor</li>
+      </ul>
+    </div>
+    <!-- TO ADD: the brief Tanya has shared with the photographer -->
+    <div class="panel todo">The full brief shared with the photographer will be added here.</div>
+  </section>
+
+  <section id="tbd">
+    <h2>Still to decide</h2>
+    <div class="panel">
+      <ul class="list">
+        <li><b>Host / anchor:</b> who will make the announcements (couple entry, gathering upstairs, tea).</li>
+        <li><b>Check-in time:</b> 10:00 or 11:00 am.</li>
+        <li><b>Ready time:</b> 4:00 or 4:30 pm.</li>
+        <li><b>Aarti start:</b> 4:00 or 4:45 pm.</li>
+        <li><b>Lunch end:</b> 2:30 or 3:00 pm.</li>
+        <li><b>Dance list:</b> who's performing, and who is collecting names.</li>
+        <li><b>Games:</b> which games, and who runs them.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    The invite: <a href="../">prateeksethi.tanyaarora.in</a>
+  </footer>
+
+</div>
+</body>
+</html>
