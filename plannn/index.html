@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Roka Plan · Tanya &amp; Prateek</title>
+  <meta name="description" content="The plan for Tanya and Prateek's roka on 6 December 2026.">
+  <meta property="og:title" content="Roka plan · Tanya &amp; Prateek">
+  <meta property="og:description" content="Sunday, 6 December 2026 · Namami Ganges, Rishikesh. The plan for the day.">
+  <meta property="og:image" content="https://prateeksethi.tanyaarora.in/assets/preview.jpg">
+  <link rel="icon" href="../assets/flower.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* A plain, readable plan page in the invite's colours. No animation, just information. */
+    :root {
+      --bg: #FBF6EC;
+      --panel: #FFFDF8;
+      --ink: #3F3E30;
+      --muted: #6B6651;
+      --sage: #5D6143;
+      --rule: #E2D9C3;
+      --blush: #C47F6B;
+      --chip: #FBE6DC;
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: "Spectral", Georgia, serif; font-size: 17px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 660px; margin: 0 auto; padding: 28px max(18px, env(safe-area-inset-left)) 56px max(18px, env(safe-area-inset-right)); }
+    h1, h2, h3 { font-family: "Marcellus", Georgia, serif; font-weight: 400; color: var(--sage); margin: 0; }
+    h1 { font-size: 38px; line-height: 1.15; }
+    h2 { font-size: 25px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+    h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+    h3 { font-size: 18px; margin: 0 0 4px; }
+    p, ul, ol { margin: 0; }
+    a { color: var(--sage); text-underline-offset: 3px; }
+    b { font-weight: 500; }
+
+    header { padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
+    .kicker { font-family: "Marcellus", Georgia, serif; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--blush); margin-bottom: 4px; }
+    .meta { margin-top: 6px; font-size: 18px; }
+    .updated { margin-top: 6px; font-size: 14.5px; color: var(--muted); }
+
+    section { padding-top: 34px; }
+
+    /* The day */
+    .timeline { list-style: none; padding: 0; border-left: 2px solid var(--rule); margin-left: 6px; }
+    .timeline li { position: relative; padding: 0 0 18px 22px; }
+    .timeline li::before {
+      content: ""; position: absolute; left: -7px; top: 8px;
+      width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--sage);
+    }
+    .timeline li.key::before { background: var(--blush); border-color: var(--blush); }
+    .timeline time { display: block; font-size: 16px; font-weight: 500; color: var(--blush); font-variant-numeric: lining-nums; }
+    .timeline p { color: var(--muted); font-size: 16px; }
+    .timeline li:last-child { padding-bottom: 0; }
+
+    .panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; }
+    .panel + .panel { margin-top: 12px; }
+    ul.list { padding-left: 20px; }
+    ul.list li + li { margin-top: 8px; }
+    .status {
+      display: inline-block; margin-bottom: 10px; padding: 2px 10px; border-radius: 999px;
+      background: var(--chip); color: var(--blush); font-size: 14px; font-weight: 500;
+    }
+    .linkbtn {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 4px;
+      padding: 9px 16px; border: 1px solid var(--sage); border-radius: 8px;
+      color: var(--sage); text-decoration: none; font-size: 16px; background: #fff;
+    }
+    .linkbtn::after { content: "↗"; font-size: 14px; }
+
+    /* Food: menu cards that open in a viewer */
+    .menus { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+    .menu-card {
+      display: flex; flex-direction: column; gap: 8px; padding: 10px; text-align: left;
+      background: var(--panel); border: 1px solid var(--rule); border-radius: 10px;
+      font: inherit; color: inherit; cursor: pointer;
+    }
+    .menu-card img { width: 100%; height: auto; aspect-ratio: 210 / 297; object-fit: cover; object-position: top; border-radius: 4px; border: 1px solid var(--rule); background: #fff; }
+    .menu-card img.fit { object-fit: contain; }
+    .menu-card b { font-size: 16px; line-height: 1.3; color: var(--sage); }
+    .menu-card span { font-size: 14px; color: var(--muted); }
+    .menu-card:focus-visible, .linkbtn:focus-visible { outline: 2px solid var(--blush); outline-offset: 2px; }
+
+    /* Viewer: full screen, scroll through pages, × to close. No download link anywhere. */
+    .viewer {
+      width: 100%; max-width: none; height: 100%; max-height: none; margin: 0; padding: 0; border: 0;
+      background: rgb(38, 39, 28);
+    }
+    .viewer::backdrop { background: rgba(38, 39, 28, .6); }
+    .viewer__bar {
+      position: sticky; top: 0; z-index: 2;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: max(10px, env(safe-area-inset-top)) 14px 10px;
+      background: rgba(38, 39, 28, .96); color: #F6EFE1;
+    }
+    .viewer__title { font-family: "Marcellus", Georgia, serif; font-size: 18px; }
+    .viewer__close {
+      flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;
+      background: #F6EFE1; color: #2E2F22; font-size: 26px; line-height: 44px; text-align: center;
+    }
+    .viewer__pages {
+      display: grid; gap: 14px; justify-items: center;
+      padding: 6px 12px max(24px, env(safe-area-inset-bottom));
+      overflow-y: auto; height: calc(100% - 64px);
+    }
+    .viewer__pages img {
+      width: 100%; max-width: 900px; height: auto; background: #fff; border-radius: 4px;
+      -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; pointer-events: none;
+    }
+    .viewer__pages img.small { width: auto; max-width: 100%; }
+
+    footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--muted); }
+
+    @media (min-width: 640px) {
+      h1 { font-size: 44px; }
+      .wrap { padding-top: 44px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="kicker">Tanya &amp; Prateek's roka</p>
+    <h1>The plan</h1>
+    <p class="meta">Sunday, 6 December 2026 · Namami Ganges, Rishikesh</p>
+    <p class="updated">Last updated 13 November 2026</p>
+  </header>
+
+  <section id="day">
+    <h2>The day</h2>
+    <ol class="timeline">
+      <li>
+        <time>11:00 am</time>
+        <h3>Check-in opens</h3>
+      </li>
+      <li>
+        <time>12:30 to 2:30 pm</time>
+        <h3>Lunch</h3>
+      </li>
+      <li>
+        <time>4:00 pm</time>
+        <h3>Guests gather at the Ganga ghat</h3>
+      </li>
+      <li class="key">
+        <time>4:00 to 4:30 pm</time>
+        <h3>Couple entry and ring exchange</h3>
+      </li>
+      <li class="key">
+        <time>4:45 to 5:00 pm</time>
+        <h3>Ganga aarti</h3>
+      </li>
+      <li>
+        <time>5:30 pm</time>
+        <h3>Everything by the river wraps up</h3>
+      </li>
+      <li>
+        <time>6:00 pm</time>
+        <h3>Everyone comes upstairs</h3>
+        <p>The couple is seated and the host announces them. Tea and snacks are served.</p>
+      </li>
+      <li class="key">
+        <time>After that</time>
+        <h3>Gift ceremony</h3>
+      </li>
+      <li>
+        <time>Then</time>
+        <h3>Dance performances and family games</h3>
+        <p>Games for the two families, like Chacha vs Chacha.</p>
+      </li>
+      <li>
+        <time>8:00 pm</time>
+        <h3>Dinner opens</h3>
+      </li>
+      <li class="key">
+        <time>8:30 pm</time>
+        <h3>Dance floor opens</h3>
+      </li>
+    </ol>
+  </section>
+
+  <section id="decor">
+    <h2>Decor</h2>
+    <div class="panel">
+      <span class="status">Decorator not finalised yet</span>
+      <ul class="list">
+        <li>The brief and overall vision we have shared with decorators:<br>
+          <a class="linkbtn" href="https://canva.link/yc7pn8pl6rxbpvj" target="_blank" rel="noopener">View the decor brief</a></li>
+        <li>The decorator will provide 3 to 5 heaters.</li>
+        <li>Once the decorator is finalised, we'll add their requirements here and create AI renderings of the decor.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="food">
+    <h2>Food</h2>
+    <div class="menus">
+      <button class="menu-card" type="button" data-menu="namami" data-pages="8" data-title="The Wedding Menu Collection">
+        <img src="menus/namami-cover.webp" alt="" width="420" height="594" loading="lazy">
+        <b>The Wedding Menu Collection</b>
+        <span>Namami Ganges · 8 pages</span>
+      </button>
+      <button class="menu-card" type="button" data-menu="selection" data-pages="5" data-title="Wedding Menu Selection">
+        <img src="menus/selection-cover.webp" alt="" width="420" height="594" loading="lazy">
+        <b>Wedding Menu Selection</b>
+        <span>Selection sheet · 5 pages</span>
+      </button>
+      <button class="menu-card" type="button" data-menu="nonveg" data-pages="1" data-title="Non-veg options" data-small="1">
+        <img class="fit" src="menus/nonveg-cover.webp" alt="" width="420" height="426" loading="lazy">
+        <b>Non-veg options</b>
+        <span>1 page</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="photographer">
+    <h2>Photographer</h2>
+    <div class="panel">
+      <span class="status">Mostly finalised · payment not done yet</span>
+      <p><b>The Home Stories Pictures</b></p>
+      <a class="linkbtn" href="https://www.instagram.com/thehomestoriespictures" target="_blank" rel="noopener">See their work on Instagram</a>
+    </div>
+  </section>
+
+  <section id="guests">
+    <h2>For guests</h2>
+    <div class="panel">
+      <ul class="list">
+        <li>Everyone will be welcomed with a mala or flowers at entry.</li>
+        <li><b>Room allocation:</b> to be decided.</li>
+        <li><b>Confirmed guests:</b> list to be added.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    The invite: <a href="../">prateeksethi.tanyaarora.in</a>
+  </footer>
+
+</div>
+
+<dialog class="viewer" id="viewer" aria-labelledby="viewerTitle">
+  <div class="viewer__bar">
+    <span class="viewer__title" id="viewerTitle"></span>
+    <button class="viewer__close" type="button" aria-label="Close">&times;</button>
+  </div>
+  <div class="viewer__pages" id="viewerPages"></div>
+</dialog>
+
+<script>
+  // Menus open as pictures in this viewer; there is no file to download.
+  (() => {
+    const viewer = document.getElementById("viewer");
+    const pagesEl = document.getElementById("viewerPages");
+    const titleEl = document.getElementById("viewerTitle");
+
+    function open(card) {
+      const { menu, pages, title, small } = card.dataset;
+      titleEl.textContent = title;
+      pagesEl.replaceChildren();
+      for (let i = 1; i <= Number(pages); i++) {
+        const img = document.createElement("img");
+        img.src = `menus/${menu}-${String(i).padStart(2, "0")}.webp`;
+        img.alt = `${title}, page ${i}`;
+        img.draggable = false;
+        if (small) img.className = "small";
+        if (i > 2) img.loading = "lazy";
+        pagesEl.appendChild(img);
+      }
+      pagesEl.scrollTop = 0;
+      document.documentElement.style.overflow = "hidden";
+      viewer.showModal();
+    }
+    function close() { viewer.close(); }
+
+    document.querySelectorAll(".menu-card").forEach((c) => c.addEventListener("click", () => open(c)));
+    viewer.querySelector(".viewer__close").addEventListener("click", close);
+    viewer.addEventListener("close", () => { document.documentElement.style.overflow = ""; });
+    // tap the dark area around the pages to close
+    viewer.addEventListener("click", (e) => { if (e.target === viewer || e.target === pagesEl) close(); });
+    viewer.addEventListener("contextmenu", (e) => e.preventDefault());
+  })();
+</script>
+</body>
+</html>
